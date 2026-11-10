@@ -165,6 +165,7 @@ seatwave-targets/
   gradle/                     Wrapper files and libs.versions.toml, the one place for versions
   gradle.lockfile             Pinned transitive versions (settings-gradle.lockfile does the same for settings)
   sheets/                     The four requirements sheets, as Markdown tables
+  tech/                       Beginner notes: one file per technology, plus line-by-line walkthroughs
   src/main/java/io/plainround/seatwave/targets/
     availability/             Topology, parser, calculator, downtime and report; the availability command
     sheet/                    Markdown reader, row validator, target records and report; the sheet command
@@ -201,6 +202,10 @@ The validator enforces these rules:
 - Placeholders count as empty: TBD, TODO, n/a, na, none, unknown, ?, and -.
 - Two rows may not set a target for the same measure (same operation, attribute, metric, percentile and window, ignoring case). The later row is rejected.
 - One bad row rejects the whole sheet. The report lists every bad row, so one run shows all the work.
+
+## Technology notes
+
+The `tech/` folder explains every technology this repository uses, from zero: Java, Gradle and its wrapper scripts, the version catalog, dependency locking, the formatter, the coverage tool, the three test libraries, Markdown, Docker Compose, EditorConfig and Git. Four more files walk through the main code and the tests line by line. Start at `tech/README.md`, which gives a reading order.
 
 ## What is simplified for teaching
 
